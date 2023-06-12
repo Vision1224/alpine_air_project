@@ -37,3 +37,19 @@ def index():
             return jsonify({'error': str(e)}), 400
 
     return render_template('index.html')
+
+@main_blueprint.route('/orders_data', methods=['GET'])
+def orders_data():
+    if request.method == 'GET':
+        try:
+            with open('purchase_orders.json', 'r') as json_file:
+                purchase_orders = [json.loads(line) for line in json_file]
+            return jsonify(purchase_orders)
+        except Exception as e:
+            return jsonify({'error': str(e)}), 400
+
+
+@main_blueprint.route('/orders', methods=['GET'])
+def orders():
+    if request.method == 'GET':
+        return render_template('orders.html')

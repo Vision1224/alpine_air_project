@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Purchase Orders</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/orders.css') }}" />
+  </head>
+  <body>
+    <h1>Purchase Orders</h1>
+    <table id="ordersTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="{{ url_for('static', filename='js/orders.js') }}"></script>
+  </body>
+</html>

@@ -2,10 +2,11 @@ import json
 from flask import Blueprint, request, jsonify, render_template
 import pandas as pd
 
-main_blueprint = Blueprint('main', __name__, template_folder='../templates')
+main_blueprint = Blueprint('main', __name__, template_folder='../templates', static_folder='../static')
 
 @main_blueprint.route('/', methods=['GET', 'POST'])
 def index():
+
     if request.method == 'POST':
         try:
             date = request.form.get('date')
@@ -29,7 +30,8 @@ def index():
                 for order in purchase_orders:
                     json.dump(order, json_file)
                     json_file.write('\n')
-            return jsonify({'message': 'Purchase orders submitted successfully.'})
+            return 'Purchase orders submitted successfully.', 200
+
 
         except Exception as e:
             return jsonify({'error': str(e)}), 400

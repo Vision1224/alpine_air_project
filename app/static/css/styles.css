@@ -1,0 +1,68 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form styles */
+#purchaseOrderForm {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="date"],
+input[type="text"],
+input[type="file"],
+input[type="submit"] {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* Response message styles */
+/* Response message styles */
+#response {
+    display: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 500px;
+    padding: 15px;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #4caf50;
+    font-weight: bold;
+    text-align: center;
+}
